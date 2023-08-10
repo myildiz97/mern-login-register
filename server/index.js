@@ -1,6 +1,6 @@
 import express from "express";
 import dotenv from "dotenv";
-import mongoose, { mongo } from "mongoose";
+import mongoose from "mongoose";
 import router from "./routes/authRoutes.js";
 import cookieParser from "cookie-parser";
 

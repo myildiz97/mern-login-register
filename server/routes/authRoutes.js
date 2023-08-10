@@ -7,7 +7,7 @@ const router = express.Router();
 //middleware
 router.use(cors({
   credentials: true,
-  origin: "http://localhost:5173"
+  origin: "https://mern-login-register-wq6r.vercel.app"
 }));
 
 router.get("/", test);
