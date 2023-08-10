@@ -21,7 +21,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cors(
   {
     credentials: true,
-    origin: ["https://mern-login-register-wq6r.vercel.app"],
+    origin: ["https://mern-login-register-client.vercel.app/"],
     methods: ["POST", "GET"]
   }
 ));
