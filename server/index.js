@@ -3,6 +3,7 @@ import dotenv from "dotenv";
 import mongoose from "mongoose";
 import router from "./routes/authRoutes.js";
 import cookieParser from "cookie-parser";
+import cors from "cors";
 
 dotenv.config();
 
@@ -17,6 +18,14 @@ mongoose.connect(process.env.MONGO_URL)
 app.use(express.json());
 app.use(cookieParser());
 app.use(express.urlencoded({ extended: false }));
+app.use(cors(
+  {
+    credentials: true,
+    origin: ["https://mern-login-register-wq6r.vercel.app"],
+    methods: ["POST", "GET"]
+  }
+));
+
 app.use("/", router);
 
 const port = 8000;
